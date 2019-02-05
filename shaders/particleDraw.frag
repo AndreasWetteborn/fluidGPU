@@ -1,5 +1,3 @@
-
-
 //out vec4 FragmentColour;
 
 void main(void)

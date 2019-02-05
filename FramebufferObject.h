@@ -7,16 +7,16 @@
 class FramebufferObject
 {
 public:
-	FramebufferObject();
-	~FramebufferObject();
+    FramebufferObject();
+    ~FramebufferObject();
 
-	void Activate();
-	void Deactivate();
+    void Activate();
+    void Deactivate();
 
-	void AttachTexture(GLenum attachmentPoint , GLuint textureID);
-	void SetDrawBuffer(GLenum attachmentPoint);
+    void AttachTexture(GLenum attachmentPoint, GLuint textureID);
+    void SetDrawBuffer(GLenum attachmentPoint);
 
 private:
-	bool CheckFramebufferStatus();
-	GLuint framebufferID;
+    bool CheckFramebufferStatus();
+    GLuint framebufferID;
 };

@@ -6,19 +6,19 @@
 class DualTexture
 {
 public:
-	DualTexture(int size, float *data);
-	DualTexture(int sizeX, int sizeY,  float *data);
-	~DualTexture(void);
+    DualTexture(int size, float *data);
+    DualTexture(int sizeX, int sizeY, float *data);
+    ~DualTexture(void);
 
-	GLuint GetReadTexture(){return textures[readID]->GetID(); }
-	GLuint GetWriteTexture(){return textures[writeID]->GetID();}
-	int GetReadID(){return readID;}
-	int GetWriteID(){return writeID;}
-	void Swap();
+    GLuint GetReadTexture() { return textures[readID]->GetID(); }
+    GLuint GetWriteTexture() { return textures[writeID]->GetID(); }
+    int GetReadID() { return readID; }
+    int GetWriteID() { return writeID; }
+    void Swap();
 
-	void ReadBackTexture(float *data);
+    void ReadBackTexture(float *data);
 
 private:
-	Texture *textures[2];
-	int readID, writeID;
+    Texture *textures[2];
+    int readID, writeID;
 };
