@@ -111,3 +111,4 @@ void ParticleSolver::Update(GLuint velocityTexture, float dt)
     glEnd();
 
     particleTexture->Swap();
+}
